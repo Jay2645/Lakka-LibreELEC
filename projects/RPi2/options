@@ -5,6 +5,14 @@
   # The TARGET_CPU variable controls which processor should be targeted for
   # generated code.
     case $TARGET_ARCH in
+      aarch64)
+        if [ "$BOARD" = "RPi4" ]; then
+          TARGET_CPU="cortex-a72"
+          TARGET_CPU_FLAGS="+crypto+crc+fp+simd"
+          TARGET_FEATURES="64bit neon"
+        else
+          TARGET_CPU="cortex-a7"
+        ;;
       arm)
         # TARGET_CPU:
         # arm2 arm250 arm3 arm6 arm60 arm600 arm610 arm620 arm7 arm7m arm7d
@@ -167,5 +175,5 @@
     RA_PLAYLIST_CORES="${RA_PLAYLIST_CORES//parallel_n64/mupen64plus_next}"
 
   # disable some cores
-    LIBRETRO_CORES="${LIBRETRO_CORES// yabasanshiro /}"
-    LIBRETRO_CORES="${LIBRETRO_CORES// play /}"
+  #  LIBRETRO_CORES="${LIBRETRO_CORES// yabasanshiro /}"
+  #  LIBRETRO_CORES="${LIBRETRO_CORES// play /}"
