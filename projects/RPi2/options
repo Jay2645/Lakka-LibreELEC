@@ -12,7 +12,9 @@
           TARGET_FEATURES="64bit neon"
         else
           TARGET_CPU="cortex-a7"
+        fi
         ;;
+
       arm)
         # TARGET_CPU:
         # arm2 arm250 arm3 arm6 arm60 arm600 arm610 arm620 arm7 arm7m arm7d
@@ -64,7 +66,7 @@
     UBOOT_CONFIGFILE=""
 
   # Kernel target
-    KERNEL_TARGET="zImage"
+    KERNEL_TARGET="Image"
 
   # Kernel extra targets to build
     KERNEL_UBOOT_EXTRA_TARGET=""

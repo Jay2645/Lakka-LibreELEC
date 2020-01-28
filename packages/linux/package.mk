@@ -82,7 +82,7 @@ case "$LINUX" in
     PKG_PATCH_DIRS="default-rpi"
     ;;
   default-rpi4)
-    PKG_VERSION="71d47f4c4bd7fd395b87c474498187b2f9be8751"
+    PKG_VERSION="767722747b98c2d57425f984da2a8192ae30cc69"
     PKG_URL="https://github.com/raspberrypi/linux/archive/$PKG_VERSION.tar.gz"
     PKG_PATCH_DIRS="default-rpi4"
     ;;
